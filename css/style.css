@@ -1,0 +1,424 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --fa-style-family-classic: "Font Awesome 6 Free";
+}
+.conteiner{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width:768px) {
+    .conteiner{
+        width: 750px;
+    }
+}
+@media (min-width:992px) {
+    .conteiner{
+        width: 970px;
+    }
+}
+@media (min-width:1200px) {
+    .conteiner{
+        width: 1170px;
+    }
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 100px;
+}
+@media (max-width:768px) {
+    header{
+        width: 100%;
+    }
+}
+header .icon i{
+    font-size: 50px;
+    margin: 20px 0 15px 45px;
+}
+header nav ul{
+    margin: 0 60px 0;
+}
+header nav ul li{
+    display: inline;
+    margin-left: 15px;
+}
+header nav ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    color: #757575;
+    transition: 0.4s;
+} 
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #8e8d8d;
+    transition: 0.4s;
+}
+header nav ul li a:hover::after{
+    width: 100%;
+}
+header nav ul li:hover a{
+    color: black;
+}
+header nav .toggle-menu{
+   margin: 25px 35px 0;
+    font-size: 20px;
+}
+@media (max-width:767px){
+    header nav .toggle-menu:hover + ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 90px;
+        left: -58px;
+        width: 100%;
+        background-color: rgb(0 0 0 / 50%);
+        padding: 15px;
+        z-index: 1000;
+    }
+}
+@media (max-width:767px){
+    header nav ul li a{
+        color: white;
+        font-size: 16px;
+    }
+}
+@media (max-width:767px){
+    header nav ul li {
+        padding: 10px;
+        margin: 0;
+    }
+    header nav ul li:not(:last-child){
+        border-bottom: 1px solid white;
+    }
+}
+@media (min-width:767px) {
+    header nav .toggle-menu{
+        display: none;
+    } 
+}
+@media (max-width:767px) {
+    header nav ul {
+        display: none;
+    } 
+}
+.conteiner .home{
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width:991px) {
+    .conteiner .home {
+       flex-direction: column;
+       justify-content: center;
+    }
+}
+.row{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.conteiner .home .row  .name{
+    padding-top: 135px;
+}
+@media (max-width:767px) {
+    .conteiner .home .row  .name{
+        padding-top: 40px;
+        text-align: center;
+        margin-left: 5px;
+    }
+}
+@media (max-width:991px) {
+    .conteiner .home .row  .name{
+        padding-top: 40px;
+        text-align: center;
+        margin-left: 5px;
+    }
+}
+@media (max-width:991px) {
+    .conteiner .home .image .imag{
+        text-align: center;
+        margin-top: -40px;
+    }
+}
+.conteiner .home .row .name h1{
+    font-size: 130px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: -13px;
+    line-height: 100px;
+    margin: 0;
+    opacity: 0.8;
+}
+@media (max-width:767px) {
+    .conteiner .home .row  .name h1{
+        font-size: 90px;
+        line-height: 0.8;
+        margin-bottom: 8px;  
+        letter-spacing: -6.3px;  
+    }
+}
+.conteiner .home .row  .name h3{
+    text-transform: uppercase;
+    letter-spacing: 20px;
+    color: #E04343;
+    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font-weight: 600;
+
+}
+@media (max-width:767px) {
+    .conteiner .home .row  .name h3{
+        line-height: 1.5;
+        letter-spacing: 10px;
+    }
+}
+.conteiner .home .image {
+    padding: 50px;
+}
+@media (max-width:767px) {
+    .conteiner .image .imag img{
+        width: 275px;
+        margin: 0 -15px;
+    }
+}
+.about{
+    background-color: #E04343;
+    height: 400px;
+    margin: -55px 0 50px;
+    text-align: center;
+}
+@media (max-width:767px) {
+    .about{
+        margin: -54px 0 50px;;
+    }
+}
+.about h3{
+    color: white;
+    text-transform: uppercase;
+    padding: 90px 0 20px 0;
+    font-size: 17px;
+    letter-spacing: 4px;
+}
+.about i{
+    position: relative;
+    top: -11px;
+}
+.about h3 span{
+    color: #FFE800;
+}
+@media (max-width:767px) {
+    .about h3{
+        padding: 30px 0 20px 0;
+        font-weight: normal;
+    }
+}
+.about p{
+    width: 700px;
+    margin: auto;
+    color: white;
+    line-height: 2;
+    font-size: 15px;
+    padding-top: 17px;
+}
+@media (max-width:767px) {
+    .about p{
+        width: 300px;
+        padding-top: 0
+    }
+}
+.service {
+    padding: 0 0 100px;
+}
+.service .conteiner .title{
+    text-align: center;
+    margin: 100px 0;
+}
+.service .conteiner h1{
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: #666;
+    font-size: 17px;
+    font-weight: bold;
+}
+.service .conteiner .content{
+    display: flex;
+    margin: -20px;
+}
+@media (max-width:991px) {
+    .service .conteiner .content{
+        flex-direction: column;
+    }
+}
+.service .conteiner .content .box{
+    text-align: center;
+}
+@media (max-width:767px) {
+    .service .conteiner .content > :first-child{
+        margin: -50px 0 0;
+    }
+}
+
+.service .conteiner .content .box .icon{
+    font-size: 56px;
+    color: #E04343;
+    position: relative;
+    border: 1px solid #E04343;
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 180px;
+    margin: 10px auto 40px;
+    transition: 0.5s;
+}
+.service .conteiner .content .box .icon i{
+    transition: 0.3s;
+}
+.service .conteiner .content .box .icon:hover{
+    background-color: #E04343;
+}
+.service .conteiner .content .box .icon:hover i{
+    color: white;
+    font-size: 65px;
+}
+.service .conteiner .content .box .text{
+    margin: 0px 20px;
+}
+.service .conteiner .content .box .text h3{
+    margin: 0 0 25px;
+    color: #353535;
+    text-transform: uppercase;
+}
+.service .conteiner .content .box .text h3::after{
+    content: '';
+    display: block;
+    border: 1px solid #cccccc;
+    width: 65px;
+    margin: 20px auto;
+}
+.service .conteiner .content .box .text p{
+    line-height: 1.7;
+    font-size: 14px;
+    color: #8c9398;
+    word-spacing: 1px;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px;
+}
+.bg-red{
+    background-color: #E04343;
+}
+.line{
+    display: flex;
+    width: 100%;
+}
+@media (max-width:767px) {
+    .line {
+        flex-direction: column;
+    }
+}
+@media (max-width:992px) {
+    .line {
+        flex-direction: column;
+    }
+}
+.line .image{
+    padding: 0;
+}
+.line .image .about-image{
+    background-size: cover;
+    height: 400px;
+}
+@media (min-width:992px) {
+    .line .image{
+        width: 50%;
+    }
+}
+@media (max-width:992px) {
+    .line .image .about-image{
+        width: 100%;
+    }
+}
+.line .text{
+    padding: 20px 50px 25px 50px;
+}
+.line .text h3{
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 27px 0;
+}
+.line .text h3::after{
+    content: '';
+    border-bottom: 2px solid white;
+    width: 65px;
+    display: block;
+    margin-top: 20px;
+}
+.line .text p{
+    color: white;
+    font-size: 14px;
+    line-height: 2;
+    margin: 16px 0;
+    letter-spacing: -0.5px;
+}
+.line .text a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 20px 30px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.8s;
+}
+.line .text a:hover{
+    background-color: white;
+    color: #E04343;
+}
+@media (min-width:992px) {
+    .line .text{
+        width: 50%;
+    }
+}
+.line .two > h3{
+    color: #8c8c8c;
+}
+.line .two > h3::after{
+    border-color: #CCCCCC;
+}
+.line .two > p{
+    color: #8c8c8c;
+    letter-spacing: -0.5px;
+}
+.line .two > a{
+    color: #8c8c8c;
+    border-color: #8c8c8c ;
+}
+.line .two > a:hover{
+    color: black;
+    border-color: black ;
+}
+
